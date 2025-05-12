@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>Pema Festive - Test</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fafafa;
+      font-family: sans-serif;
+    }
+    .tree-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .tree-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .top-button {
+      position: absolute;
+      top: 52%;
+      left: 48%;
+      width: 30px;
+      height: 30px;
+      background-color: rgba(255, 215, 0, 0.7);
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid white;
+    }
+    .card-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url('https://i.imgur.com/B1D7bBe.png') no-repeat center/cover;
+      width: 300px;
+      height: 200px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="tree-container">
+    <img src="tree-image.png" alt="Pema e Krishtlindjes" class="tree-image">
+    <div class="top-button" onclick="showCard()"></div>
+  </div>
+
+  <div class="card-modal" id="card">
+    <div class="close-btn" onclick="hideCard()">&times;</div>
+    <h2>Gëzuar Festat!</h2>
+    <p>Uroj që kjo Krishtlindje të sjellë gëzim, paqe dhe dashuri në zemrën tënde.</p>
+  </div>
+
+  <script>
+    function showCard() {
+      document.getElementById('card').style.display = 'block';
+    }
+    function hideCard() {
+      document.getElementById('card').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
